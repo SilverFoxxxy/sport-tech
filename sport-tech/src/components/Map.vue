@@ -30,7 +30,7 @@ var sports_grounds = ref([
         coords: [54.720088, 55.936071],
         name: "Спортплощадка",
         text: "Площадка для спортивного программирования!",
-        items: [0]
+        items: [1, 2]
     },
     {
         id: 1,
@@ -87,9 +87,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <h3>Карта!!</h3>
+    <h1>Карта спортплощадок</h1>
 
-    <div id="map" style="width: 600px; height: 400px; margin: auto; border: 1px solid black;"></div>
+    <div id="map" style="width: 900px; max-width: 90%; height: 400px; margin: auto; border: 1px solid black;"></div>
 
     <!-- <SportGround.vue/> -->
     <ul>
@@ -130,6 +130,13 @@ onMounted(() => {
     /* border: solid 1px gray;
     width: auto;
     margin: auto; */
+}
+
+@media screen and (max-width: 700px) {
+  #map {
+    width: 80%;
+    height: 30%;
+  }
 }
 
 </style>

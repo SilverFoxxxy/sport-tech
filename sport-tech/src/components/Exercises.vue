@@ -19,6 +19,24 @@ const elements = ref([
         author: 'MrDelrus',
         name: 'Приседания',
         text: '<a> abracadabra </a>Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text'
+    },
+    {
+        id: 3,
+        author: 'MrDelrus',
+        name: 'Отжимания от брусьев',
+        text: '<a> abracadabra </a>Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text'
+    },
+    {
+        id: 4,
+        author: 'MrDelrus',
+        name: 'Выход силой',
+        text: '<a> abracadabra </a>Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text'
+    },
+    {
+        id: 5,
+        author: 'MrDelrus',
+        name: 'Пресс',
+        text: '<a> abracadabra </a>Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text Lorem ipsum asdawdqdasdqwe random text'
     }
 ]);
 </script>
@@ -31,7 +49,7 @@ const elements = ref([
         <li v-for="element in elements" :key="element.id">
             <div class="post">
                 <div class="post_title">{{ element.name }}</div>
-                <div class="post_test" v-html="element.text"></div>
+                <!-- <div class="post_test" v-html="element.text"></div> -->
                 <!-- <div class="post_author">{{ element.author }}</div> -->
                 <!-- <button @click="showExercises(element.name)"> {{ element.name }} </button> -->
             </div>
