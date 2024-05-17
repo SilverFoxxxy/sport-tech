@@ -141,6 +141,25 @@ async function addResult() {
   }
 }
 
+//post_title" type="text" placeholder="Заголовок"/><br><br>
+//        <textarea style="font-size:1.5rem; width:250px;" id="post_content
+async function addPost() {
+  let username = user_info.value.username;
+  let pswd = user_info.value.password;
+
+  let title = document.getElementById("post_title").value;
+  let content = document.getElementById("post_content").value;
+
+  let resp = await request_add_post(username, pswd, title, content);
+
+  if (resp.status == "ok") {
+    alert("Успешно");
+  } else {
+    alert("Что-то пошло не так");
+  }
+}
+
+
 </script>
 
 <template>
@@ -219,6 +238,17 @@ async function addResult() {
 
     <br><br>
     <center>
+    <div id="AddResult">
+      <h2>Добавить статью</h2>
+
+      <div style="font-size:1.5rem;">
+        <input style="font-size:1.5rem; width:250px;" id="post_title" type="text" placeholder="Заголовок"/><br><br>
+        <textarea style="font-size:1.5rem; width:250px;" id="post_content" cols="40" rows="5"></textarea><br>
+        <button style="font-size:1.5rem; width:250px;" @click="addPost">Добавить статью</button>
+      </div>
+    </div>
+
+    <br><br><br>
 
     <div id="AddResult" v-show="user_info.role=='admin' || user_info.role=='volunteer'">
       <h2>Добавить результат</h2>

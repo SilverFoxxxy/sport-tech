@@ -115,6 +115,26 @@ async function request_get_rating() {
     return req_res;
 }
 
+async function request_get_feed() {
+    let req_json = {
+        type: 'get_feed'
+    };
+    let req_res = send_req(req_json);
+    return req_res;
+}
+
+async function request_add_post(username, pswd_hash, title, content) {
+    let req_json = {
+        type: 'add_feed',
+        username: username,
+        password: pswd_hash,
+        title: title,
+        content: content
+    };
+    let req_res = send_req(req_json);
+    return req_res;
+}
+
 async function request_posts_by_tags(tag, posts_count) {
     let req_json = {
         type: 'posts_by_tags',
