@@ -187,6 +187,8 @@ async function addPost() {
   
     <button v-show="user_info.id != -1" class="tablinks tab_username">{{user_info.username}}</button>
     <button v-show="user_info.id != -1" class="tablinks" @click="exit_login()">Выйти</button>
+    <button class="tablinks" style="display:flex;"><img style="height: 21px; object-fit: contain;" src="./assets/text-logo.jpg"/></button>
+    <button class="tablinks" style="display:flex;"><img style="width: 18px; height: 18px; object-fit: contain;" src="./assets/icon.jpg"/></button>
   </div>
 
   <!-- Tab content -->
